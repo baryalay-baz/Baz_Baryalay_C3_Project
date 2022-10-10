@@ -186,6 +186,7 @@ class RestaurantServiceTest {
         assertEquals(nExpectedPrice, service.getOrderPrice());
 
         //ASSERTING BY SENDING ITEM NAMES AS PARAMETERS TO OVERLOADED getOrderPrice Method
+        //AS PER EVALUATION RUBRICS
         String sOrderItems[] = {"Vegetable lasagne","Spagetti Bolognese", "Fish and Chips"};
         assertEquals(nExpectedPrice, service.getOrderPrice(sOrderItems,restaurant));
     }
