@@ -10,6 +10,18 @@ public class RestaurantService {
     public Restaurant findRestaurantByName(String restaurantName) throws restaurantNotFoundException{
 
         //DELETE ABOVE STATEMENT AND WRITE CODE HERE
+        Restaurant foundRest = null;
+
+        for (Restaurant rest:restaurants) {
+            if(rest.getName().equals(restaurantName)){
+                foundRest = rest;
+            }
+        }
+        if(foundRest==null){
+            throw new restaurantNotFoundException(restaurantName);
+        }else {
+            return foundRest;
+        }
 
         //DONE BY BAZ
     }
